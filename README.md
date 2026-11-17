@@ -2,6 +2,10 @@
 
 CrashLab is a local-first Node.js debugging workspace powered by the real [`whycrash`](https://www.npmjs.com/package/whycrash) npm package. Paste an error, inspect its diagnosis and stack frames, run examples in a Docker container, and save debugging sessions for later.
 
+## Live demo
+
+[Open CrashLab](https://why-crash-demo.vercel.app)
+
 ## Requirements
 
 - Node.js 20.9 or newer (Next.js 16 requirement)
