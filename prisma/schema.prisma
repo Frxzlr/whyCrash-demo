@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model DebugSession {
+  id          String   @id @default(cuid())
+  title       String
+  input       String   @db.Text
+  diagnosis   Json?
+  errorType   String?
+  category    String?
+  resolved    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([createdAt])
+  @@index([category])
+}
